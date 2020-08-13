@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+       
+		<title>My_login</title>
+        
+		<style type="text/css">
+	
+		</style>
+	</head>
+	<body>
+	<div id="my" class="login_content">
+		<div class="my_info">
+			<img src="images/login/bj_01.png" />
+			
+		</div>
+		<div class="aui-content-box-fl">
+                <div class="aui-form-header">
+                    <div class="aui-form-header-item on">密码登录</div>
+                    <div class="aui-form-header-item">验证码登录</div>
+                    <span class="aui-form-header-san"></span>
+                </div>
+                <div class="aui-form-content">
+                    <div class="aui-form-content-item">
+                        <form action="">
+                            <div class="aui-form-list">
+                                <input type="text" class="aui-input" name="" placeholder="请输入账号" data-required="required" autocomplete="off">
+                            </div>
+                            <div class="aui-form-list">
+                                <input type="password" class="aui-input" name="" placeholder="请输入密码" data-required="required" autocomplete="off">
+                            </div>
+                            <div class="aui-form-pwd clearfix">
+                                <a href="#">忘记密码？</a>
+                            </div>
+                            <div class="aui-form-btn">
+                                <input type="submit" class="aui-btn" value="登&nbsp;录" >
+                            </div>
+                        </form>
+                    </div>
+                    <div class="aui-form-content-item">
+                        <form action="">
+                            <div class="aui-form-list">
+                                <input type="text" class="aui-input" name="" placeholder="请输入手机号" data-required="required" autocomplete="off">
+                            </div>
+                           
+                            <div class="aui-form-list">
+                                <input type="text" class="aui-input" name="" placeholder="请输入验证码" data-required="required" autocomplete="off">
+                                <input type="button" class="aui-child" value="获取验证码" >
+                            </div>
+                            <div class="aui-form-pwd clearfix">
+                                <a href="#">忘记密码？</a>
+                            </div>
+                            <div class="aui-form-btn">
+                                <input type="submit" class="aui-btn" value="登&nbsp;录">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+	</div>
+	<script type="text/javascript" src='js/jquery-1.11.3.min.js'></script>
+	<script type="text/javascript">
+        $(function(){
+
+            /*tab标签切换*/
+            function tabs(tabTit,on,tabCon){
+                $(tabCon).each(function(){
+                    $(this).children().eq(0).show();
+
+                });
+                $(tabTit).each(function(){
+                    $(this).children().eq(0).addClass(on);
+                });
+                $(tabTit).children().click(function(){
+                    $(this).addClass(on).siblings().removeClass(on);
+                    var index = $(tabTit).children().index(this);
+                    $(tabCon).children().eq(index).show().siblings().hide();
+                });
+            }
+            tabs(".aui-form-header","on",".aui-form-content");
+
+        })
+    </script>
+	</body>
+</html>
